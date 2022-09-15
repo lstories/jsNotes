@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        window.onload = function() {
+
+            // 获取body标签
+            var body = document.getElementsByTagName("body")[0];
+
+            /**
+             * document中有一个属性body, 它保存的是body的引用
+             * 
+            */
+            var body = document.body;
+
+            /**
+             * document.documentElement 保存的是html根标签
+            */
+            var html = document.documentElement;
+
+            console.log(body);
+
+            /**
+             * document.all 代表页面中所有的元素 
+             * 等同于 ===> document.getElementsByTagName("*")
+            */
+            var all = document.all;
+            for (var i = 0; i < all.length; i++){
+                console.log(all[i]);
+            }
+
+            all = document.getElementsByTagName("*");
+            console.log(all.length);    // 6 
+
+
+
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

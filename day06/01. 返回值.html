@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01. 返回值</title>
+
+    <script>
+        /**
+         * 创建一个函数, 用来计算三个数的和
+         * 
+         * 可以使用 return 来设置函数的返回值
+         *  - 语法: return 值
+         * 
+         * 
+         *  - return 后的值将会作为函数的执行结果返回, 可以定义一个变量来接受该结果
+         *  - return 后的语句都不会执行
+         * 
+         * 如果 return 语句后不跟任何值就相当于返回一个 undefined
+         * 如果不写 return , 返回的也是 undefined
+         * 
+        */
+
+        function sum(a,b,c) {
+            var d = a + b +c;
+            return d;
+        }
+
+        // 调用函数
+        // 变量 result 的值就是函数的执行结果
+        // 函数返回声明 result 的值就是什么
+        var result = sum(7,8,9);
+        console.log(result);
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

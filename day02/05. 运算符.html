@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05. 运算符</title>
+
+
+    <script>
+        /**
+         * 运算符也叫操作符
+         * 通过运算符可以对一个或多个值进行运算
+         * 比如: typeof 就是运算符, 可以来获取一个值的类型
+         *       - typeof 将值的类型以字符串的形式返回
+         * 
+         * 算术运算符
+         *      当对非 Number 类型的值进行运算时, 会将这些值转换为 Number类型进行计算
+         *      任何值都和 NaN 做运算都得 NaN
+         *      + : 可以将两个值进行加法运算, 并将结果返回
+         *          如果对两个字符串进行加法运算, 则会坐拼串, 会将两个字符串拼接成一个字符串, 并返回
+         *          任何值和字符串做加法运算, 都会先转换为字符串, 然后再和字符串做拼串的操作
+         *      - : 可以将两个值, 做减法运算, 并且返回结果, 与 + 类似
+         *      * : 可以对两个值进行乘法运算
+         *      / : 可以对两个值进行除法运算
+         *      % : 取模运算(取余数)
+         * 
+        */
+        var a = 123;
+        var result = typeof a;
+
+        result = a + 1;
+
+        result = 456 + 123;
+        
+        result = true + 1;
+
+        result = true + false;
+
+        result = 2 + null;
+
+        result = 2 + NaN;
+
+        result = "123" + "234";     // 会拼接 123234
+
+        console.log(result);
+
+        var str = 123 + "1";
+
+        str = true + "hello";
+
+        // 任何值和字符串相加, 都会转换为字符串, 并做拼串操作
+        /**
+         * 我们可以利用这一特点, 将一个任意的数据类型转换为 String
+         * 只需要为任意的数据类型 + 一个 "" (空串), 即可将其转换为 String
+         * 这是一种隐式类型转换, 有浏览器自动完成, 实际上也是调用了 String() 函数
+         * 
+        */
+        var c = null;
+        c = 123;
+        c = c + "";
+        console.log(c);
+        console.log(typeof c);
+
+
+        // - 
+        result = 100 - "1";
+        result = 100 - true;
+
+        console.log(result);
+
+        // *
+        result = 2 * 2;
+        result = 2 * "8";
+        result = 2 * undefined;
+        result = 2 * null;
+        console.log(result);
+
+        // /
+        result = 4 / 2;
+        result = 3 / 2;
+        console.log(result);
+
+        /**
+         * 任何值做 - * / 运算时, 都会自动转换为 Number
+         * 我们可以利用这一点做隐式的类型转换
+         *      可以通过为一个值 -0 *1 /1 来将其转换为 Number
+         *      原理和 Number() 函数类似, 用来了更简单罢了
+        */
+
+
+        // %
+        result = 9 % 3;
+        result = 9 % 4;
+
+        console.log(result);
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

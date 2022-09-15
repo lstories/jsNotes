@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. return</title>
+
+    <script>
+
+        function fun() {
+            alert("函数执行");
+            for (var i = 0; i < 5; i++){
+                console.log(i);
+
+                if (i == 2){
+                    // 退出当前的循环
+                    // break;
+                    // 跳过当次循环
+                    // continue;
+                    // 结束后面语句执行
+                    return;
+                }
+                console.log(i);
+
+            }
+
+            
+        }
+        alert("函数执行了");
+
+        function fun2(){
+            var obj = {name: "shs"};
+            return obj;
+        }
+        var a = fun2();
+        console.log(a.name);
+
+
+        function fun3(){
+            function fun4() {
+                // 在函数内部在声明一个函数
+                function fun5() {
+                    console.log("我是5");
+
+                }
+                // 将fun5函数对象作为返回值
+                return fun5;
+            }
+        }
+        var b = fun3();
+        console.log(a);
+
+        // fun3()();
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

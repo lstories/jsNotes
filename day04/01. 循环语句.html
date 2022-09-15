@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01. 循环语句</title>
+
+    <script type="text/javascript">
+
+        /**
+         * 向页面中输出连续的数字
+         * 
+         * 
+         * 循环语句: 通过循环语句可以反复执行一段代码多次
+         * 
+         * while循环
+         *  - 语法:
+         *      while(条件表达式){
+         *          语句...
+         *      }
+         * 
+         *  - while 语句在执行时, 
+         *      先对条件表达式进行求值判断,
+         *      如果值为true, 则执行循环体
+         *      循环体执行完毕后, 继续对表达式进行判断, 
+         *      如果为true, 则继续执行循环体, 以此类推
+         * 
+         * do...while 循环
+         *  - 语法:
+         *      do{
+         *      
+         *      } while();
+         * 
+         *  - 执行流程:
+         *      do...while 语句在执行时, 会先执行循环体
+         *      循环体执行完毕以后, 在对while后的条件表达式进行判断,
+         *      如果结果为 true, 则继续执行循环体, 执行完毕后继续判断
+         *      如果结果为 false, 则终止循环
+         * 
+         *  实际上这两个语句功能类似, 不同的时 while 是先判断后执行, do...while 是先执行后判断
+         *  do...while 可以保证循环体至少执行一次, 而 while 不能
+         * 
+         * 
+         * 
+        */
+
+        var n = 1;
+
+        while (n < 10){
+            document.write(n + "<br/>");
+            n++;
+        }
+
+        // 创建一个循环, 往往需要三个步骤
+
+        // 1. 创初始化一个变量
+        var i = 0;
+
+        // 2. 在循环中设置一个条件表达式
+        while (i < 10) {
+            
+            // 3. 定义一个更新表达式, 每次更新初始化变量
+            i++;
+            console.log(i);
+
+        }
+
+
+        do {
+            document.write(i+"<br>");
+            i++;
+        } while(i<20);
+
+
+
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

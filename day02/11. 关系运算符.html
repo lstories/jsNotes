@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11. 关系运算符</title>
+
+    <script>
+        /**
+         * 通过关系运算符可以比较两个值之间的大小关系,
+         * 如果关系成立它会返回true, 如果关系不成立, 则返回 false
+         * 
+         * 
+         * > 大于号
+         *  - 判断符号左侧的值是否大于右侧的
+         *  - 如果关系成立,返回 true, 如果关系不成立则返回 false
+         * 
+         * >= 大于等于
+         *  - 判断符号左侧的值是否大于或者等于右侧的值
+         * 
+         * 
+         * < 小于号
+         * 
+         * <= 小于等于
+         * 
+         * 
+         * 非数值的情况
+         *  - 对于非数值进行比较时, 会将其先转换为数字, 再进行比较
+         *  - 如果符号两侧的值都是字符串时, 不会将其转换为数字进行比较
+         *      而是会分别比较字符串字符的 Unicode 编码
+         * 
+         * 
+         * 
+        */
+        var result = 5 > 10;    // false
+        result = 5 > 4;     // true
+        result = 5 > 5;     // false
+
+        console.log(result);
+
+        result = 5 >= 5;    // true
+        console.log(result);
+
+        result = 5 < 6;
+        result = 5 <= 6;
+        console.log(result);
+
+
+        console.log(1 > true);  // false
+        console.log(1 >= true); // true
+        console.log(1 > "0");   // true
+        console.log(10 >= null);    // true
+        // 任何值和 NaN 进行比较 都是 false
+        console.log(10 > "hello");  // false
+        console.log(10 < "hello");  // false
+
+        console.log(true > false);  // true
+
+        // 比较两个字符串时, 比较 Unicode 编码
+        console.log("1" > "5");     // true
+        // 如果比较两个字符串类型的数字, 可能会得到不可预期的结果
+        console.log("11" < "5");    // true
+        // 注意: 在比较两个字符串型的数字时, 一定要转型
+        console.log("11" < +"5");    // false
+        console.log("a" < "b");     // true
+
+        // 比较字符编码时是一位一位进行比较
+        // 如果两位一样, 则比较下一位, 所以借用它来对英文进行排序
+        console.log("bbc" < "b");   // true
+
+
+
+    </script>
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

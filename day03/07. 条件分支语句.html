@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07. 条件分支语句</title>
+
+    <script>
+        /**
+         * 条件分支语句也叫switch语句
+         *  语法:
+         *      switch(){
+         *          case 表达式:
+         *              语句...
+         *              break;
+         *          case 表达式:
+         *              语句...
+         *              break;
+         *          default:
+         *              语句...
+         *              break;
+         *      }
+         * 
+         *  执行流程:
+         *      switch...case...语句
+         *      在执行时会依次将case后的表达式的值和 switch 后的条件表达式的值进行全值比较
+         *      如果比较结果为 true, 则从当前 case 处开始执行代码
+         *          当前 case 后的所有的代码都会执行, 我们可以在case的后边跟着 break;
+         *          这样可以确保指挥执行当前case后的语句, 而不会执行其他 case
+         *      如果比较结果为 false, 则继续向下比较
+         * 
+         *  switch 语句 和 if 语句的功能实际上有重复的, 使用 switch 可以实现 if 的功能
+         *  同样, 使用 if 也可以实现 switch 的功能, 所以我们在使用时, 根据自己的习惯来使用
+         * 
+        */
+
+        var num = +prompt("请输入数:");
+
+        switch (num){
+            case 1:
+                alert("语句1");
+                break;
+            case 2:
+                alert("语句2");
+                break;
+            default:
+                alert("非法数字");
+                break;
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

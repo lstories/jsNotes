@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04. for循环练习</title>
+
+
+    <script>
+        /**
+         * 打印1-100之间的奇数之和
+         * 
+         * 
+        */
+
+        var sum = 0;
+        for (var i = 0; i <= 100; i++){
+            // 判断i是否是奇数
+            // 不能被 2 整除
+            if (i%2 != 0) {
+                // i%2 == 0 偶数
+                // i%2 != 0 奇数
+                console.log(i);
+                sum = sum + i;
+            }
+            
+        }
+
+        console.log("1-100之间奇数之和 " + sum);
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
